@@ -1,6 +1,6 @@
 import { MutationTree } from 'vuex';
 import { productModel } from '@/modules/products/models/product';
-import { initialState, State } from './initialState';
+import { State } from './initialState';
 
 export type MutationPayload = {
   setPagination: number;

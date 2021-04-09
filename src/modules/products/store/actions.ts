@@ -1,6 +1,4 @@
-import {
-  GetterTree, MutationTree, ActionContext, CommitOptions,
-} from 'vuex';
+import { ActionContext, CommitOptions } from 'vuex';
 import { productModel } from '@/modules/products/models/product';
 import { State } from './initialState';
 import { MutationPayload } from './mutations';
@@ -77,21 +75,6 @@ export const actions: Actions = {
     dispatch('getProducts');
   },
   async getProducts(con: AugmentedActionContext): Promise<productModel[]> {
-    // await setTimeout(() => {
-    //   const { commit, state } = con;
-    //   // Simply imitates backend
-    //   const responseFromBack = getDataFromBackend(
-    //     state.products.filter.current,
-    //     state.products.pagination.current,
-    //   );
-    //   const itemsCount = responseFromBack.items.length;
-    //   if (itemsCount < (itemsPerPage * (state.products.pagination.current - 1))) {
-    //     const newActivePage = Math.floor(responseFromBack.items.length / itemsPerPage)
-    //       + (itemsCount % itemsPerPage === 0 ? 0 : 1);
-    //     con.dispatch('setPagination', newActivePage);
-    //   }
-    //   commit('getProducts', responseFromBack);
-    // }, 2000);
     const { commit, state } = con;
     // Simply imitates backend
     const responseFromBack = getDataFromBackend(
