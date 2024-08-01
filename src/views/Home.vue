@@ -1,18 +1,62 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="testConditions">
+    <p>
+      <strong>тестовое задание Vue.js</strong>
+      <br/>
+    - создать тестовый json файл с товарами, список полей - артикул, название,
+    производитель,цена, наличие на складе
+      <br/>
+    - выводить по 5 товаров на страницу
+      <br/>
+    - реализовать пагинацию
+      <br/>
+    - реализовать фильтрацию(например по полю производитель), при переходе на другую
+    страницу с товарами, текущий фильтр не сбрасывается
+      <br/>
+    - реализовать кнопку "сбросить фильтр"
+      <br/>
+    - выводить общее кол-во товаров(с/без фильтров)
+      <br/>
+    </p>
+    <p>
+      <strong>Notes:</strong>
+      <br/>
+      1. Vuex/vue3 на текущий момент имеет проблемы с типизацией.
+      <br/>
+      2. Vue3 devtools имеет утечки памяти, довольно часто виснет.
+      <br/>
+      3. После обновления Idea с 2020 версии до 2021 появились пара ошибок в typescript`e, vue/cli
+      стал ругаться. Это странно.
+      <br/>
+      4. Странно, но 2021 имеет больше проблем с Vue чем 2020. Не подтягиваются некоторые методы,
+      autocomplete иногда не срабатывает. Вероятно в ближайших патчах исправят.
+    </p>
+    <p>
+      В целом на это репо ушло ~20-24 часа, из которых непосредственно на задание потрачено ~10-12,
+      остальное ушло на настройку окружения и фиксы для Typescript`a.
+      <br/>
+      Плюс некоторое время я потратил чтобы посмотреть порталы/Suspense/etc.
+    </p>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<script>
+import AppLayoutHome from '@/layouts/AppLayoutHome';
 
-export default defineComponent({
+export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    AppLayoutHome,
   },
-});
+};
 </script>
+
+<style lang="scss">
+
+.testConditions {
+  text-align: left;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+</style>

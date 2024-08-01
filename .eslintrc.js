@@ -12,6 +12,10 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    'import/extensions': 0,
+    'no-multiple-empty-lines': 0,
+    'vue/no-unused-components': 0,
+    '@typescript-eslint/no-inferrable-types': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
